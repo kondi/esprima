@@ -10253,6 +10253,130 @@ var testFixture = {
 
     'Expressions in parenthesis': {
 
+        '(x)': {
+            type: 'ExpressionStatement',
+            expression: {
+                type: 'Identifier',
+                name: 'x',
+                range: [0, 3],
+                loc: {
+                    start: { line: 1, column: 0 },
+                    end: { line: 1, column: 3 }
+                }
+            },
+            range: [0, 3],
+            loc: {
+                start: { line: 1, column: 0 },
+                end: { line: 1, column: 3 }
+            }
+        },
+
+        '(42)': {
+            type: 'ExpressionStatement',
+            expression: {
+                type: 'Literal',
+                value: 42,
+                raw: '42',
+                range: [0, 4],
+                loc: {
+                    start: { line: 1, column: 0 },
+                    end: { line: 1, column: 4 }
+                }
+            },
+            range: [0, 4],
+            loc: {
+                start: { line: 1, column: 0 },
+                end: { line: 1, column: 4 }
+            }
+        },
+
+        '("Hello")': {
+            type: 'ExpressionStatement',
+            expression: {
+                type: 'Literal',
+                value: 'Hello',
+                raw: '"Hello"',
+                range: [0, 9],
+                loc: {
+                    start: { line: 1, column: 0 },
+                    end: { line: 1, column: 9 }
+                }
+            },
+            range: [0, 9],
+            loc: {
+                start: { line: 1, column: 0 },
+                end: { line: 1, column: 9 }
+            }
+        },
+
+        '([])': {
+            type: 'ExpressionStatement',
+            expression: {
+                type: 'ArrayExpression',
+                elements: [],
+                range: [0, 4],
+                loc: {
+                    start: { line: 1, column: 0 },
+                    end: { line: 1, column: 4 }
+                }
+            },
+            range: [0, 4],
+            loc: {
+                start: { line: 1, column: 0 },
+                end: { line: 1, column: 4 }
+            }
+        },
+
+        '({})': {
+            type: 'ExpressionStatement',
+            expression: {
+                type: 'ObjectExpression',
+                properties: [],
+                range: [0, 4],
+                loc: {
+                    start: { line: 1, column: 0 },
+                    end: { line: 1, column: 4 }
+                }
+            },
+            range: [0, 4],
+            loc: {
+                start: { line: 1, column: 0 },
+                end: { line: 1, column: 4 }
+            }
+        },
+
+        '(function() {})': {
+            type: 'ExpressionStatement',
+            expression: {
+                type: 'FunctionExpression',
+                id: null,
+                params: [],
+                defaults: [],
+                body: {
+                    type: 'BlockStatement',
+                    body: [],
+                    range: [12, 14],
+                    loc: {
+                        start: { line: 1, column: 12 },
+                        end: { line: 1, column: 14 }
+                    }
+                },
+                rest: null,
+                generator: false,
+                expression: false,
+                range: [0, 15],
+                loc: {
+                    start: { line: 1, column: 0 },
+                    end: { line: 1, column: 15 }
+                }
+            },
+            range: [0, 15],
+            loc: {
+                start: { line: 1, column: 0 },
+                end: { line: 1, column: 15 }
+            }
+        },
+
         '(func())': {
             type: 'ExpressionStatement',
             expression: {
