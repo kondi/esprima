@@ -288,7 +288,7 @@ if (typeof window !== 'undefined') {
                         total += 1;
                         try {
                             runTest(esprima, source, expected);
-                            reportSuccess(source, JSON.stringify(expected, null, 4));
+                            // reportSuccess(source, JSON.stringify(expected, null, 4));
                         } catch (e) {
                             failures += 1;
                             reportFailure(source, e.expected, e.actual);
