@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Esprima: Convert UI</title>
+    <style>
+        *{margin:0;padding:0;}
+        html,body{height:100%;}
+        textarea{float:left;width:48%;height:98%;margin:2px;}
+    </style>
+</head>
+<body>
+
+    <textarea id="from"></textarea>
+    <textarea id="to"></textarea>
+
+    <script src="../assets/require.js"></script>
+    <script>
+        require({
+            paths: { 'jquery': '../test/3rdparty/jquery-1.7.1' }
+        });
+
+        require(['jquery', 'convert'], function($, convert) {
+            $('#from').on('change keyup', function () {
+                $('#to').val(convert($('#from').val()));
+            }).trigger('change');
+        });
+    </script>
+
+</body>
+</html>
